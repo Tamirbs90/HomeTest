@@ -1,0 +1,23 @@
+<table class="table" style="width: 50%;">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Crest</th>
+        <th scope="col">Name</th>
+        <th scope="col">Year Founded</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let team of teams'>
+        
+          <td >
+            <input type="checkbox" class="setFavorite" (change)='setTeam(team.team_id)' 
+            [checked]="isFavorite(team.team_id)"  matTooltip='Mark as favorite' 
+            [matTooltipDisabled]='isFavorite(team.team_id)' matTooltipPosition='left'></td>
+          <td><img src="{{team.logo}}" style="height:30px; width: 30px;"></td>
+          <td>{{team.name}}</td>
+          <td>{{team.founded}}</td>
+          <td>   <span class="star glyphicon glyphicon-star-empty"></span></td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,14 @@
+.table{
+    position: relative;
+    top:20px;
+    left:100px;
+}
+
+.table th{
+    text-align: center;
+}
+
+.table td{
+    padding-right: 12px;
+    text-align: center;
+}
